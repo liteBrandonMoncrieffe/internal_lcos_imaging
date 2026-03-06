@@ -1,0 +1,27 @@
+var classopto_kummenberg_1_1registers_1_1_output_stage_1_1_linear_output =
+[
+    [ "__init__", "classopto_kummenberg_1_1registers_1_1_output_stage_1_1_linear_output.html#a73826d4fa6c769b3a27cde872443f947", null ],
+    [ "GetAverageLimitPeriod", "classopto_kummenberg_1_1registers_1_1_output_stage_1_1_linear_output.html#accf4289a375b82d24a3f1310ec986ed4", null ],
+    [ "GetAverageLimitSum", "classopto_kummenberg_1_1registers_1_1_output_stage_1_1_linear_output.html#a8fd5711c7e1ac2fa453355449abef30f", null ],
+    [ "GetCalibration", "classopto_kummenberg_1_1registers_1_1_output_stage_1_1_linear_output.html#aa7e8d06cae4b45d9c9be0226910c5e4c", null ],
+    [ "GetChannelNumber", "classopto_kummenberg_1_1registers_1_1_output_stage_1_1_linear_output.html#a031d1b50e536eb6afbee79bc34a6098d", null ],
+    [ "GetCooldownPeriod", "classopto_kummenberg_1_1registers_1_1_output_stage_1_1_linear_output.html#a9db956a8e93994174ebd13b4fe6b59d1", null ],
+    [ "GetCurrentLimit", "classopto_kummenberg_1_1registers_1_1_output_stage_1_1_linear_output.html#af338d14f95e0b326c43c05394a6347fe", null ],
+    [ "GetOutputCurrent", "classopto_kummenberg_1_1registers_1_1_output_stage_1_1_linear_output.html#aa042a1d230161765b0efb037121b83e4", null ],
+    [ "SetAverageLimitPeriod", "classopto_kummenberg_1_1registers_1_1_output_stage_1_1_linear_output.html#a3db8dcf6008b97287da814e483479597", null ],
+    [ "SetAverageLimitSum", "classopto_kummenberg_1_1registers_1_1_output_stage_1_1_linear_output.html#a1d02fc6a241f5ab845d59b486b3c31f4", null ],
+    [ "SetCalibration", "classopto_kummenberg_1_1registers_1_1_output_stage_1_1_linear_output.html#a3f147f963f60bfbd2e0906494dd79296", null ],
+    [ "SetCooldownPeriod", "classopto_kummenberg_1_1registers_1_1_output_stage_1_1_linear_output.html#a843298ad4db0628dcc5d0943051ebade", null ],
+    [ "SetCurrentLimit", "classopto_kummenberg_1_1registers_1_1_output_stage_1_1_linear_output.html#a6dbd1429a181471049c79a23b9264584", null ],
+    [ "_channel", "classopto_kummenberg_1_1registers_1_1_output_stage_1_1_linear_output.html#aaa6e82aa6a780dba34b9a1043b918c05", null ],
+    [ "avg_limit_period", "classopto_kummenberg_1_1registers_1_1_output_stage_1_1_linear_output.html#a3cd4839afb2956eb4edc9ae40f75bb81", null ],
+    [ "avg_limit_sum", "classopto_kummenberg_1_1registers_1_1_output_stage_1_1_linear_output.html#a73450d1358e48f3538ec56087654fe7b", null ],
+    [ "calibration", "classopto_kummenberg_1_1registers_1_1_output_stage_1_1_linear_output.html#a1aa2cf112b9af0b6271772405713425d", null ],
+    [ "channel_number", "classopto_kummenberg_1_1registers_1_1_output_stage_1_1_linear_output.html#a4555856d3c70354630b47c65e675e461", null ],
+    [ "cooldown_period", "classopto_kummenberg_1_1registers_1_1_output_stage_1_1_linear_output.html#abe53fe18bfbc82a72f207369f89b99ba", null ],
+    [ "current_limit", "classopto_kummenberg_1_1registers_1_1_output_stage_1_1_linear_output.html#a9ac78c1b79d15182d2917a4d1e3a6478", null ],
+    [ "name", "classopto_kummenberg_1_1registers_1_1_output_stage_1_1_linear_output.html#ab1b2ec17b128b27299061c6357269679", null ],
+    [ "output_current", "classopto_kummenberg_1_1registers_1_1_output_stage_1_1_linear_output.html#a8b0e7d26bbdcc0bffebbe3c442f1e386", null ],
+    [ "output_disable", "classopto_kummenberg_1_1registers_1_1_output_stage_1_1_linear_output.html#a76e5cd53429807f72b9bf8d62f6e0223", null ],
+    [ "sys_id", "classopto_kummenberg_1_1registers_1_1_output_stage_1_1_linear_output.html#a61d7b458f91b6c8cc95e8f78c3f7ec20", null ]
+];

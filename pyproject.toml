@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "internal_lcos_imaging"
+version = "0.0.0"
+description = ""
+authors = [
+  { name = "Brandon Moncrieffe", email = "brandon.moncrieffe@lumentum.com" }
+]
+
+readme = "README.md"
+requires-python = ">=3.12"
+
+dependencies = [
+  "optoICC==2.0.4922"
+]
+
+[tool.uv.sources]
+optoicc = { path = "third_party/icc4c/optoICC-2.0.4922-py3-none-any.whl" }
+optokummenberg = { path = "third_party/icc4c/optoKummenberg-1.0.4894-py3-none-any.whl" }

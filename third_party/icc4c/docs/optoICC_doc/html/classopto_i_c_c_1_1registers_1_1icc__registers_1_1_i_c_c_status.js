@@ -1,0 +1,25 @@
+var classopto_i_c_c_1_1registers_1_1icc__registers_1_1_i_c_c_status =
+[
+    [ "__init__", "classopto_i_c_c_1_1registers_1_1icc__registers_1_1_i_c_c_status.html#a8039e381bfcbbca1136c62e24dddc51e", null ],
+    [ "GetDeviceDetectSwitchMask", "classopto_i_c_c_1_1registers_1_1icc__registers_1_1_i_c_c_status.html#a5d914e74c02a63dfc2b2b93af353d9f5", null ],
+    [ "GetDeviceEEPROMactiveChannel", "classopto_i_c_c_1_1registers_1_1icc__registers_1_1_i_c_c_status.html#af7cf5f55d69a7c2d171697ff4a0bc8fa", null ],
+    [ "GetMCUid", "classopto_i_c_c_1_1registers_1_1icc__registers_1_1_i_c_c_status.html#a321a01d228de203f6ab08be51e436edb", null ],
+    [ "GetMCUload", "classopto_i_c_c_1_1registers_1_1icc__registers_1_1_i_c_c_status.html#a687930f80514e0b2a630110469e47972", null ],
+    [ "GetMCUoverloadCounter", "classopto_i_c_c_1_1registers_1_1icc__registers_1_1_i_c_c_status.html#a725c41f7dac0b11f12929e0ba1b5a1a7", null ],
+    [ "GetMCUtype", "classopto_i_c_c_1_1registers_1_1icc__registers_1_1_i_c_c_status.html#a48f47236eb2dc477a7e47afdd7836313", null ],
+    [ "parse_error_flags", "classopto_i_c_c_1_1registers_1_1icc__registers_1_1_i_c_c_status.html#a940270ffaf6740db4e5377427bba4ec0", null ],
+    [ "SetDeviceDetectSwitchMask", "classopto_i_c_c_1_1registers_1_1icc__registers_1_1_i_c_c_status.html#a02c22ee1e0f933a80030faca482e9144", null ],
+    [ "SetDeviceEEPROMactiveChannel", "classopto_i_c_c_1_1registers_1_1icc__registers_1_1_i_c_c_status.html#a5e9a5e112ad0a441adbfedbd3f35abdd", null ],
+    [ "device_detect_switch_mask", "classopto_i_c_c_1_1registers_1_1icc__registers_1_1_i_c_c_status.html#ad779ae4689e7bd85e9bf4b61c622118b", null ],
+    [ "device_eeprom_active_channel", "classopto_i_c_c_1_1registers_1_1icc__registers_1_1_i_c_c_status.html#aa9766affd1d2f43d6cc7838e020c8c3d", null ],
+    [ "device_type_chan0", "classopto_i_c_c_1_1registers_1_1icc__registers_1_1_i_c_c_status.html#acccc61bb2aac283341c952444ed53182", null ],
+    [ "device_type_chan1", "classopto_i_c_c_1_1registers_1_1icc__registers_1_1_i_c_c_status.html#ac3291d0f9cd5825f71d783c60f4b6d68", null ],
+    [ "device_type_chan2", "classopto_i_c_c_1_1registers_1_1icc__registers_1_1_i_c_c_status.html#a676118bcf1d66e59dade625d2747f810", null ],
+    [ "device_type_chan3", "classopto_i_c_c_1_1registers_1_1icc__registers_1_1_i_c_c_status.html#a772e4295c605636e25aee99f20a5de24", null ],
+    [ "mcu_id", "classopto_i_c_c_1_1registers_1_1icc__registers_1_1_i_c_c_status.html#a917ee147e2ff31c13e6258f420c41f88", null ],
+    [ "mcu_load", "classopto_i_c_c_1_1registers_1_1icc__registers_1_1_i_c_c_status.html#a724fd48fe31c626a7af2a69b6ea1b1a2", null ],
+    [ "mcu_overload_counter", "classopto_i_c_c_1_1registers_1_1icc__registers_1_1_i_c_c_status.html#a925f762dc1d28c22eee174ca3d70daed", null ],
+    [ "mcu_type", "classopto_i_c_c_1_1registers_1_1icc__registers_1_1_i_c_c_status.html#a53592ebfcb84b60762606945b6bf70aa", null ],
+    [ "name", "classopto_i_c_c_1_1registers_1_1icc__registers_1_1_i_c_c_status.html#a8231b91ea1153f8ac1ea673144854ff0", null ],
+    [ "warning_flag_register", "classopto_i_c_c_1_1registers_1_1icc__registers_1_1_i_c_c_status.html#a7c360f353884d906f58bc5f3ac7cceb4", null ]
+];

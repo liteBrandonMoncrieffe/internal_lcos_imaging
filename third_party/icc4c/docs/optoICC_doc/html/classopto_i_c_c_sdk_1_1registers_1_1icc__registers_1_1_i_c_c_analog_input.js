@@ -1,0 +1,28 @@
+var classopto_i_c_c_sdk_1_1registers_1_1icc__registers_1_1_i_c_c_analog_input =
+[
+    [ "__init__", "classopto_i_c_c_sdk_1_1registers_1_1icc__registers_1_1_i_c_c_analog_input.html#ae42f6b2b5f5aaaac70562a9c443eba3f", null ],
+    [ "SetVoltages_LUT", "classopto_i_c_c_sdk_1_1registers_1_1icc__registers_1_1_i_c_c_analog_input.html#a4310f4fcbad1c170a8df31739c71375a", null ],
+    [ "GetVoltages_LUT", "classopto_i_c_c_sdk_1_1registers_1_1icc__registers_1_1_i_c_c_analog_input.html#a1763d19d3c8be82d860f4631e423d7c9", null ],
+    [ "SetValues_LUT", "classopto_i_c_c_sdk_1_1registers_1_1icc__registers_1_1_i_c_c_analog_input.html#a1fc5835dd5d9bc3b06bca7297ec7ec45", null ],
+    [ "GetValues_LUT", "classopto_i_c_c_sdk_1_1registers_1_1icc__registers_1_1_i_c_c_analog_input.html#adab39a4f52858d16b0fe46bf7489d336", null ],
+    [ "SetCalCoefEnable", "classopto_i_c_c_sdk_1_1registers_1_1icc__registers_1_1_i_c_c_analog_input.html#ac5f0fc06d610d6e118bb1ee9161dc8da", null ],
+    [ "SetUnitType_LUT", "classopto_i_c_c_sdk_1_1registers_1_1icc__registers_1_1_i_c_c_analog_input.html#abc7c96d95a495cba3b063ca65e9ab68c", null ],
+    [ "GetUnitType_LUT", "classopto_i_c_c_sdk_1_1registers_1_1icc__registers_1_1_i_c_c_analog_input.html#a669b3daabdbbcb2a3a899fa8b3c106f0", null ],
+    [ "SetExtrapolationType", "classopto_i_c_c_sdk_1_1registers_1_1icc__registers_1_1_i_c_c_analog_input.html#a422b755dd766984e060c3af1501d8f21", null ],
+    [ "GetActiveUnitType", "classopto_i_c_c_sdk_1_1registers_1_1icc__registers_1_1_i_c_c_analog_input.html#a32061d1f77bf9458384d7f0bab285d80", null ],
+    [ "sys_id", "classopto_i_c_c_sdk_1_1registers_1_1icc__registers_1_1_i_c_c_analog_input.html#aecce95c3ca09e9d49827229caf93e31a", null ],
+    [ "_unitranges", "classopto_i_c_c_sdk_1_1registers_1_1icc__registers_1_1_i_c_c_analog_input.html#a84e971a06c22b177338dbacb0ae12f64", null ],
+    [ "adc_value", "classopto_i_c_c_sdk_1_1registers_1_1icc__registers_1_1_i_c_c_analog_input.html#a33f08fe3ea7d191112487acd99ab1cbb", null ],
+    [ "unit", "classopto_i_c_c_sdk_1_1registers_1_1icc__registers_1_1_i_c_c_analog_input.html#a1cd6c14382ff07762dbccce533ef2f7f", null ],
+    [ "minimum_current", "classopto_i_c_c_sdk_1_1registers_1_1icc__registers_1_1_i_c_c_analog_input.html#a70d6841593cc85cec3c1fff91dc6f366", null ],
+    [ "maximum_current", "classopto_i_c_c_sdk_1_1registers_1_1icc__registers_1_1_i_c_c_analog_input.html#ad3c3a7d2231ed768b8dee29a485a3a6f", null ],
+    [ "minimum_dpt", "classopto_i_c_c_sdk_1_1registers_1_1icc__registers_1_1_i_c_c_analog_input.html#a876d5b304c39165d5bebf2fcc98d233a", null ],
+    [ "maximum_dpt", "classopto_i_c_c_sdk_1_1registers_1_1icc__registers_1_1_i_c_c_analog_input.html#a05018b75f874317add8fbd8c4af2274c", null ],
+    [ "cal_coef_enable", "classopto_i_c_c_sdk_1_1registers_1_1icc__registers_1_1_i_c_c_analog_input.html#a63de11f68c44024d6bf9b982cdef4c51", null ],
+    [ "unit_LUT", "classopto_i_c_c_sdk_1_1registers_1_1icc__registers_1_1_i_c_c_analog_input.html#a21d611429ec6200c9c1e0e765d839fbc", null ],
+    [ "extrapolation_type_LUT", "classopto_i_c_c_sdk_1_1registers_1_1icc__registers_1_1_i_c_c_analog_input.html#a28796e41aa2068b7345f723dcf36b360", null ],
+    [ "LUT_size", "classopto_i_c_c_sdk_1_1registers_1_1icc__registers_1_1_i_c_c_analog_input.html#a7d5d418acd2e9eda1be496ddbf630534", null ],
+    [ "LUT_voltages", "classopto_i_c_c_sdk_1_1registers_1_1icc__registers_1_1_i_c_c_analog_input.html#a61fa00a5ba5d6f8367679aa51781cd7e", null ],
+    [ "LUT_values", "classopto_i_c_c_sdk_1_1registers_1_1icc__registers_1_1_i_c_c_analog_input.html#afe6a712c5b3077d755ae35799ceaef44", null ],
+    [ "name", "classopto_i_c_c_sdk_1_1registers_1_1icc__registers_1_1_i_c_c_analog_input.html#aa6dd99e58323dfaea2d02856af215c61", null ]
+];

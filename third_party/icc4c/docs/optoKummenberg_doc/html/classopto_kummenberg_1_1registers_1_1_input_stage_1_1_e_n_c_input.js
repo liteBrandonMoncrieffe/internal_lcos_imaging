@@ -1,0 +1,28 @@
+var classopto_kummenberg_1_1registers_1_1_input_stage_1_1_e_n_c_input =
+[
+    [ "__init__", "classopto_kummenberg_1_1registers_1_1_input_stage_1_1_e_n_c_input.html#acad62a664acd643fbfd4e5e7188f7a67", null ],
+    [ "get_value", "classopto_kummenberg_1_1registers_1_1_input_stage_1_1_e_n_c_input.html#a321194da3ccbf9ec59fc9ee6d10c998f", null ],
+    [ "get_value_id", "classopto_kummenberg_1_1registers_1_1_input_stage_1_1_e_n_c_input.html#affc666a5059b1aba0a9a1f882b2ee673", null ],
+    [ "GetAutoResetZ", "classopto_kummenberg_1_1registers_1_1_input_stage_1_1_e_n_c_input.html#a93309f6f9c5e113d20441b1763652869", null ],
+    [ "GetCounter", "classopto_kummenberg_1_1registers_1_1_input_stage_1_1_e_n_c_input.html#a74baff6f8f00ea127bffa060ddd7e3d3", null ],
+    [ "GetMaxerror", "classopto_kummenberg_1_1registers_1_1_input_stage_1_1_e_n_c_input.html#a91dbf8c492f7ca6c7988b03e5920d32d", null ],
+    [ "GetValue", "classopto_kummenberg_1_1registers_1_1_input_stage_1_1_e_n_c_input.html#a2d5046c6fee96c27344dfb9eb78baf14", null ],
+    [ "GetZCount", "classopto_kummenberg_1_1registers_1_1_input_stage_1_1_e_n_c_input.html#a1d35a62a4b4e9e0e14aec849cb0ae396", null ],
+    [ "init", "classopto_kummenberg_1_1registers_1_1_input_stage_1_1_e_n_c_input.html#a18ba808fd21f89f4fa6c5f4cfe81d9ba", null ],
+    [ "is_init_done", "classopto_kummenberg_1_1registers_1_1_input_stage_1_1_e_n_c_input.html#af2550bb9e31ad95d7ee4bb06135938b1", null ],
+    [ "SetAutoResetZ", "classopto_kummenberg_1_1registers_1_1_input_stage_1_1_e_n_c_input.html#aa575960f266c6f6e690e61c9c20b4710", null ],
+    [ "SetCounter", "classopto_kummenberg_1_1registers_1_1_input_stage_1_1_e_n_c_input.html#a88f0cc8be997b99ef645571e26825c46", null ],
+    [ "SetMaxerror", "classopto_kummenberg_1_1registers_1_1_input_stage_1_1_e_n_c_input.html#a7d119545ed3f67d6a4bdfce043076e5f", null ],
+    [ "SetValue", "classopto_kummenberg_1_1registers_1_1_input_stage_1_1_e_n_c_input.html#ac3be9e6b22a64378184ea314a73b4be1", null ],
+    [ "SetZCount", "classopto_kummenberg_1_1registers_1_1_input_stage_1_1_e_n_c_input.html#aaa1cb79e79a690b0d55a64a0b0e9a8e4", null ],
+    [ "_readonly", "classopto_kummenberg_1_1registers_1_1_input_stage_1_1_e_n_c_input.html#ac95d2cb937094f2b3c18299c2ed9f7d5", null ],
+    [ "autoreset_z", "classopto_kummenberg_1_1registers_1_1_input_stage_1_1_e_n_c_input.html#af526579ce25ce6d429109d5a8d62280b", null ],
+    [ "counter", "classopto_kummenberg_1_1registers_1_1_input_stage_1_1_e_n_c_input.html#aa54c0d8146fa8f0eb06c20c9f0e55e31", null ],
+    [ "lasterror", "classopto_kummenberg_1_1registers_1_1_input_stage_1_1_e_n_c_input.html#a32b471a5a9a243a3cbe56bd25e4578a3", null ],
+    [ "maxerror", "classopto_kummenberg_1_1registers_1_1_input_stage_1_1_e_n_c_input.html#afb7defe960961ee8e21fa1c4f1ebbde7", null ],
+    [ "n_sensors", "classopto_kummenberg_1_1registers_1_1_input_stage_1_1_e_n_c_input.html#ad940f5ea5f030442554d6a7ee68ff959", null ],
+    [ "name", "classopto_kummenberg_1_1registers_1_1_input_stage_1_1_e_n_c_input.html#ad67cf65bb69bddfac18543403876d8d8", null ],
+    [ "sys_id", "classopto_kummenberg_1_1registers_1_1_input_stage_1_1_e_n_c_input.html#a2c0e995cf7ea48cb0ad9d267e2617710", null ],
+    [ "value", "classopto_kummenberg_1_1registers_1_1_input_stage_1_1_e_n_c_input.html#a6f48953d2fe4ce9c88e3dd0f6e478421", null ],
+    [ "zcount", "classopto_kummenberg_1_1registers_1_1_input_stage_1_1_e_n_c_input.html#a62f63afc6be5feadb278f7a14a732230", null ]
+];

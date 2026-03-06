@@ -1,0 +1,28 @@
+var classopto_kummenberg_1_1registers_1_1_misc_systems_1_1_status =
+[
+    [ "__init__", "classopto_kummenberg_1_1registers_1_1_misc_systems_1_1_status.html#ac48233aa60b6b54a756a97d3419e7b0f", null ],
+    [ "GetErrorFlagRegister", "classopto_kummenberg_1_1registers_1_1_misc_systems_1_1_status.html#a3edd15699966b8a452a2e67d444fdb00", null ],
+    [ "GetErrorFlagRegisterString", "classopto_kummenberg_1_1registers_1_1_misc_systems_1_1_status.html#ac3d657470c5d94e07ca200b2d5c4b1c1", null ],
+    [ "GetFirmwareBranch", "classopto_kummenberg_1_1registers_1_1_misc_systems_1_1_status.html#a4297ce42aada27c94fca439b076dae26", null ],
+    [ "GetFirmwareBuild", "classopto_kummenberg_1_1registers_1_1_misc_systems_1_1_status.html#a967849224e70082cf6d1eba1940479fc", null ],
+    [ "GetFirmwareID", "classopto_kummenberg_1_1registers_1_1_misc_systems_1_1_status.html#adf20f3b8339f32254d31d4df1c3108df", null ],
+    [ "GetFirmwareSN", "classopto_kummenberg_1_1registers_1_1_misc_systems_1_1_status.html#acab5ff672b84fccb2f095a07d491cdb8", null ],
+    [ "GetFirmwareType", "classopto_kummenberg_1_1registers_1_1_misc_systems_1_1_status.html#a359de0fc23fb2ff7e7a28ebc6ac6a09b", null ],
+    [ "GetFirmwareVersionMajor", "classopto_kummenberg_1_1registers_1_1_misc_systems_1_1_status.html#a603f7442ae6fee6fc33ef7ac282ce7c3", null ],
+    [ "GetFirmwareVersionMinor", "classopto_kummenberg_1_1registers_1_1_misc_systems_1_1_status.html#ae529077bcc44127dc8207e86543bb2de", null ],
+    [ "GetFirmwareVersionRevision", "classopto_kummenberg_1_1registers_1_1_misc_systems_1_1_status.html#ac0dace87ee2d0959be0c9efd1b80aeeb", null ],
+    [ "GetGitHEADSHA1Vector", "classopto_kummenberg_1_1registers_1_1_misc_systems_1_1_status.html#afb51b8b19fe2164e4bd0b0ce061bae60", null ],
+    [ "parse_error_flags", "classopto_kummenberg_1_1registers_1_1_misc_systems_1_1_status.html#a6de83d9f5a8c64553ac4a72b3a3822cc", null ],
+    [ "ResetErrorFlagRegister", "classopto_kummenberg_1_1registers_1_1_misc_systems_1_1_status.html#aab28c436a35a478f9b43004c0b03ffa7", null ],
+    [ "SetFirmwareSN", "classopto_kummenberg_1_1registers_1_1_misc_systems_1_1_status.html#a41fd4e1698b68f6e32b6609cc9e7f0e6", null ],
+    [ "error_flag_register", "classopto_kummenberg_1_1registers_1_1_misc_systems_1_1_status.html#a4794c1a21bdd801be0c6f80b4eeaf0f6", null ],
+    [ "firmware_id", "classopto_kummenberg_1_1registers_1_1_misc_systems_1_1_status.html#ae50360e7264d684498152c1f6bc3d6c5", null ],
+    [ "fw_branch", "classopto_kummenberg_1_1registers_1_1_misc_systems_1_1_status.html#a63434f580779b289921c790127c780d3", null ],
+    [ "fw_type", "classopto_kummenberg_1_1registers_1_1_misc_systems_1_1_status.html#a5fcfda51fed423abf014dccba7a8a2b3", null ],
+    [ "fw_version_build", "classopto_kummenberg_1_1registers_1_1_misc_systems_1_1_status.html#ac77b25e1968ee634d21b814669fdd142", null ],
+    [ "fw_version_major", "classopto_kummenberg_1_1registers_1_1_misc_systems_1_1_status.html#a334a46aa036abb7482ab4981bfa0e679", null ],
+    [ "fw_version_minor", "classopto_kummenberg_1_1registers_1_1_misc_systems_1_1_status.html#a7bbdaebe296ae6425918d61c22b94e3e", null ],
+    [ "fw_version_revision", "classopto_kummenberg_1_1registers_1_1_misc_systems_1_1_status.html#a33cf3fd08ef9ed6939a85cdbfa708b93", null ],
+    [ "name", "classopto_kummenberg_1_1registers_1_1_misc_systems_1_1_status.html#a9930aaf1bad6b56ee3d4e869289c0cfe", null ],
+    [ "sys_id", "classopto_kummenberg_1_1registers_1_1_misc_systems_1_1_status.html#ad90046cdc4340a2fa4f364ce0fd9ad94", null ]
+];
