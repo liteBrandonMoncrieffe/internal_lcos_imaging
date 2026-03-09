@@ -37,7 +37,5 @@ def setup_logging(log_level=logging.INFO, log_file=None):
         logging.getLogger().addHandler(file_handler)
     
     logging.info("Logging configured successfully")
-
-
-# Auto-configure on import with INFO level
-setup_logging(log_level=logging.INFO)
+    
+    return logging.getLogger()

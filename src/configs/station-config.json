@@ -1,0 +1,27 @@
+{
+  "RobotStation": {
+    "RobotConfig": {
+      "RobotIP": "100.100.100.11",
+      "Location": "Internal LCOS Imaging Station",
+      "Name": "UR5e"
+    },
+    "RobotDefaultSpeeds": {
+      "RapidJoint": {
+        "Velo_rad_per_s": 0,
+        "Accel_rad_per_s2": 0
+      },
+      "Rapid": {
+        "Velo_m_per_s": 0,
+        "Accel_m_per_s2": 0
+      },
+      "Touch": {
+        "Velo_m_per_s":0,
+        "Accel_m_per_s2": 0
+      },
+      "FineTouch": {
+        "Velo_m_per_s": 0,
+        "Accel_m_per_s2": 0
+      }
+    }
+  }
+}
