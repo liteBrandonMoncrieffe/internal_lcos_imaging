@@ -13,9 +13,9 @@
         "rvecs": 0,
         "tvecs": 0
     },
-    "jigs": {
+    "jigs": { 
         "pick": {
-            "description": "pick jig locating slide",
+            "description": "pick jig location with respect to vacuum TCP",
             "coordinate_system": [
                 -0.29844,
                 -0.13711,
