@@ -4,7 +4,7 @@ import cv2
 import os
 from datetime import datetime
 
-def snap_and_save(save_dir="images"):
+def snapshot(save_dir="images"):
     os.makedirs(save_dir, exist_ok=True)
 
     # Create and open camera
@@ -44,4 +44,4 @@ def snap_and_save(save_dir="images"):
     print(f"Saved image to {filename}")
 
 if __name__ == "__main__":
-    snap_and_save()
+    snapshot()
