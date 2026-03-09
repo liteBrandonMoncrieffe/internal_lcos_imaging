@@ -1,7 +1,0 @@
-Metadata-Version: 2.4
-Name: internal_lcos_imaging
-Version: 0.0.0
-Author-email: Brandon Moncrieffe <brandon.moncrieffe@lumentum.com>
-Requires-Python: >=3.12
-Description-Content-Type: text/markdown
-Requires-Dist: optoICC @ ./third_party/icc4c/optoICC-2.0.4922-py3-none-any.whl
