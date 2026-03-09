@@ -14,9 +14,16 @@ readme = "README.md"
 requires-python = ">=3.12"
 
 dependencies = [
-  "optoICC==2.0.4922"
+  "optokummenberg>=1.0.4565",
+  "optoicc==2.0.4922",
+  "pypylon>=26.0.0",
+  "numpy>=2.0.0",
+  "opencv-python>=4.0.0",
+  "vps-lightcontrol",
+  "pyserial>=3.5"
 ]
 
 [tool.uv.sources]
 optoicc = { path = "third_party/icc4c/optoICC-2.0.4922-py3-none-any.whl" }
 optokummenberg = { path = "third_party/icc4c/optoKummenberg-1.0.4894-py3-none-any.whl" }
+vps-lightcontrol = { git = "https://github.com/lite-cnp/VPS_LightControl_Driver.git" }

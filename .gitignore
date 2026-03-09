@@ -1,4 +1,4 @@
 images
 .venv
-internal_lcos_imaging.egg-info
-third_party\icc4c
+src/internal_lcos_imaging.egg-info
+third_party/icc4c
