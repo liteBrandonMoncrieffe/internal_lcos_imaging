@@ -3,11 +3,11 @@
 
 - configurations are initialized at start, fix them.
 
-- (48-49) dispenser is CM4 and controlled with ethernet now
+- (48-49) dispenser is CM4 and controlled with ethernet opposed to CM3 serial.
 
-- (51-53) configure code for setting up Camera object using camera control, consider removing and calling
+- (51-53) configure code for setting up Camera object using camera control, consider removing and calling module
 
-- (123-130) Find coord of slide to be able to work  within slide frame/verify existing coord of slide
+- (123-130) Find coord of slide to be able to work within slide frame/verify existing coord of slide
 
 - (133-134) Are these the correct IO assignments for my purposes?
 
