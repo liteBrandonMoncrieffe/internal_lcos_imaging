@@ -1,20 +1,38 @@
-## intialization
 
-- verify syringe, vacuum tool and camera tcp
+### ---------- core rundown ----------- ### 
 
-- pick -> safe, operational coordinate systems
+- configurations are initialized at start, fix them.
 
-- get tcp offset (?) for getting tcp from flange accuratley 
+- (48-49) dispenser is CM4 and controlled with ethernet now
 
-- point on bread board
+- (51-53) configure code for setting up Camera object using camera control, consider removing and calling
 
-- auto focusing after getting COM port fixed
+- (123-130) Find coord of slide to be able to work  within slide frame/verify existing coord of slide
 
-- configure default speed
+- (133-134) Are these the correct IO assignments for my purposes?
 
-- how to get plane/coord system of a certain object that is not attached to the robot? is it always just a pose wrw to the tool you plan to use it with?
+- (306-321) Presumably does not take pictures
 
-## completed 
+- (327) Eventually add AVS detect drop areas functionality
 
-- vacuum, syring tcpP (?)
-- station config (?)
+### ---------- one offs ----------- ### 
+
+## config
+- dispense configuration file
+
+- configure default speeds in script/config
+
+- consult entire station config
+
+## TCP, coordinate/poses, joint pose
+- verify ILCOS syringe and vacuum TCPs
+
+- get TCP offset for camera lens
+
+- pick -> get safe joint pose, get linear pose/coord
+
+- place -> get safe joint pose, get linear pose/coord
+
+## extensions 
+
+- auto focusing with COM port fixed

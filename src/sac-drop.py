@@ -1,34 +1,30 @@
 import logging
 import os
 import json
-from types import SimpleNamespace
+import numpy as np
 from logging_setup.log_config import setup_logging
+from logging_setup.utilities import to_namespace, wait_for_user_action
 
 import mudi.dispensers
 import robot_control
+from core.robot_control import pickup_slide, place_slide, find_dispense_points, dispense_epoxy, take_pictures
+from core.camera_control import x
+from core.vision_control import detect_drop_areas
 from pypylon import pylon
 
-def json_to_namespace(data):
-    """Convert JSON dict to SimpleNamespace for dot notation access."""
-    if isinstance(data, dict):
-        return SimpleNamespace(**{k: json_to_namespace(v) for k, v in data.items()})
-    elif isinstance(data, list):
-        return [json_to_namespace(item) for item in data]
-    else:
-        return data
 
 if __name__ == "__main__":
     tool_center_point_json_path = "configs/tool-center-points.json"
     station_config_json_path = "configs/station-config.json"
     process_config_json_path = "configs/process-config.json"
 
-    connection_and_speeds = json_to_namespace(
+    connection_and_speeds = to_namespace(
         json.load(open(station_config_json_path))
     )
-    tool_center_points = json_to_namespace(
+    tool_center_points = to_namespace(
         json.load(open(tool_center_point_json_path))
     )
-    process_config = json_to_namespace(
+    process_config = to_namespace(
         json.load(open(process_config_json_path))
     )
 
@@ -36,7 +32,7 @@ if __name__ == "__main__":
     rtde_frequency_Hz = 500
     dispenser_com_port = 8
     dispenser_baud_rate = 57600
-    log_file_folder = "C:\\testsw\\robotic_epoxy_squeeze_drop\\logs\\"
+    log_file_folder = 'src\\logging_setup\\logs'
     log_file_name = "slide_pnp_log"
     
     # Setup logging with custom config
@@ -52,7 +48,7 @@ if __name__ == "__main__":
     dispenser = mudi.dispensers.SuperSigmaCM3()
     dispenser.connect(dispenser_com_port, dispenser_baud_rate)
 
-    picture_save_folder = "C:\\testsw\\robotic_epoxy_squeeze_drop\\dispense_pictures\\"
+    picture_save_folder = 'src\\logging_setup\\dispense_pictures'
     camera = pylon.InstantCamera(pylon.TlFactory.GetInstance().CreateFirstDevice())
     print("Using device:", camera.GetDeviceInfo().GetModelName())
 
@@ -124,7 +120,7 @@ if __name__ == "__main__":
     pick_jig_coords = process_config.jigs.pick.coordinate_system
     place_location_1_coords = process_config.jigs.place_location_1.coordinate_system
 
-    # redefine pick and place poses in base frame
+    # pick pose/coord wr to local slide coord
     slide_pickup_base_pose = rtde_control.poseTrans(
         pick_jig_coords,
         process_config.jigs.pick.local_slide_position
@@ -138,22 +134,11 @@ if __name__ == "__main__":
     slide_vacuum_do = process_config.tools.slide_vacuum_do
 
     # Load parameter sets from file
-    param_file = "C:\\testsw\\robotic_epoxy_squeeze_drop\\configs\\dispense_param_sets.json"
+    param_file = 'src\\configs\\dispense_param_sets.json'
     with open(param_file, "r") as f:
         param_sets = json.load(f)
 
-    run_state_file = "run_state.pkl"
-    state = load_run_state(run_state_file)
-    start_idx = 0
-    if state:
-        print("Previous run detected.")
-        print("Resume previous run? (y/n): ", end="")
-        if input().strip().lower() == "y":
-            start_idx = state.get("param_idx", 0)
-        else:
-            os.remove(run_state_file)
-
-    for param_idx, param in enumerate(param_sets[start_idx:], start=start_idx):
+    for param_idx, param in enumerate(param_sets):
         # Get parameter sets for both drops
         param_set_1 = param_sets[param_idx]
         if param_idx + 1 < len(param_sets):
@@ -166,7 +151,7 @@ if __name__ == "__main__":
             f"Drop 2: time={param_set_2['dispense_time_ms']}ms, pressure={param_set_2['dispense_pressure_kpa']}kPa ===")
         
         # load slide
-        show_message_box(
+        wait_for_user_action(
             "Load slide into pickup jig, then click OK to continue."
         )
 
@@ -220,7 +205,7 @@ if __name__ == "__main__":
         )
 
         # load slide
-        show_message_box(
+        wait_for_user_action(
             "Load slide into pickup jig, then click OK to continue."
         )
         
@@ -372,8 +357,6 @@ if __name__ == "__main__":
             break
 
         # Save progress after each run
-        save_run_state({"param_idx": param_idx + 2}, run_state_file)
-
         print("Run complete. Continue to next set? (y/n): ", end="")
         if input().strip().lower() != "y":
             print("Exiting. Progress saved.")
@@ -381,8 +364,6 @@ if __name__ == "__main__":
     
     if not needle_collision:
         print("All parameter sets complete.")
-        if os.path.exists(run_state_file):
-            os.remove(run_state_file)
 
     else:
         print("Run ended due to needle collision with cleaning jig. Please address the issue and restart the program.")
