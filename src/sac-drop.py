@@ -8,7 +8,6 @@ import mudi.dispensers
 import robot_control
 from pypylon import pylon
 
-
 def json_to_namespace(data):
     """Convert JSON dict to SimpleNamespace for dot notation access."""
     if isinstance(data, dict):
@@ -17,8 +16,6 @@ def json_to_namespace(data):
         return [json_to_namespace(item) for item in data]
     else:
         return data
-
-
 
 if __name__ == "__main__":
     tool_center_point_json_path = "configs/tool-center-points.json"
