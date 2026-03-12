@@ -7,20 +7,20 @@
     },
     "RobotDefaultSpeeds": {
       "RapidJoint": {
-        "Velo_rad_per_s": 0.02,
-        "Accel_rad_per_s2": 0.1
+        "Velo_rad_per_s": 0.3,
+        "Accel_rad_per_s2": 0.6
       },
       "Rapid": {
-        "Velo_m_per_s": 0.1,
-        "Accel_m_per_s2": 0.5
+        "Velo_m_per_s": 0.2,
+        "Accel_m_per_s2": 0.4
       },
       "Touch": {
         "Velo_m_per_s":0.02,
-        "Accel_m_per_s2": 0.1
+        "Accel_m_per_s2": 0.04
       },
       "FineTouch": {
-        "Velo_m_per_s": 0.01,
-        "Accel_m_per_s2": 0.05
+        "Velo_m_per_s": 0.005,
+        "Accel_m_per_s2": 0.01
       }
     }
   }

@@ -16,6 +16,7 @@ requires-python = ">=3.12.2"
 dependencies = [
   "robot-control==1.1.1",
   "mudi==0.0.4",
+  "mudi-http @ file:///C:/drivers/MusashiDispense/MusashiDispense/MusashiDispense/mudi_http/dist/mudi_http-0.1.0-py3-none-any.whl",
   "optokummenberg>=1.0.4565",
   "optoicc==2.0.4922",
   "pypylon>=26.0.0",

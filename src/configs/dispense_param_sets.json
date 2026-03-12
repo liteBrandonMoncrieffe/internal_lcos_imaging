@@ -1,10 +1,10 @@
 [
     {
-        "dispense_time_ms": 0,
-        "dispense_pressure_kpa": 0
+        "dispense_time_ms": 2,
+        "dispense_pressure_kpa": 55
     },
     {
-        "dispense_time_ms": 100,
-        "dispense_pressure_kpa": 50
+        "dispense_time_ms": 2,
+        "dispense_pressure_kpa": 55
     }
 ]

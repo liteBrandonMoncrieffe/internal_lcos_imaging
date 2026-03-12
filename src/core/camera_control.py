@@ -4,14 +4,15 @@ import cv2
 import os
 from datetime import datetime
 
-def snapshot(save_dir="images"):
-    os.makedirs(save_dir, exist_ok=True)
-
-    # Create and open camera
+def initialize_camera():
     camera = pylon.InstantCamera(
         pylon.TlFactory.GetInstance().CreateFirstDevice()
     )
-    camera.Open()
+    return camera
+
+def snapshot(camera, save_dir="images"):
+    os.makedirs(save_dir, exist_ok=True)
+
 
     # ----- Optional GigE transport tuning -----
     if camera.GetDeviceInfo().GetDeviceClass() == "BaslerGigE":
@@ -37,11 +38,12 @@ def snapshot(save_dir="images"):
     camera.Close()
 
     # ----- Save -----
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     stamp = len(os.listdir(save_dir)) + 1
-    filename = os.path.join(save_dir, f"image_{stamp}.png")
+    filename = os.path.join(save_dir, f"image_{stamp}_{timestamp}.png")
 
     cv2.imwrite(filename, image)
     print(f"Saved image to {filename}")
 
 if __name__ == "__main__":
-    snapshot()
+    pass

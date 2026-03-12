@@ -1,12 +1,14 @@
+
+import json
+
 import numpy as np
 import time
 from typing import List
-import os
-import glob
-from datetime import datetime
-import cv2 as cv
 
 from algebra import plane_math as pm
+from algebra import cartesian_pose_math as cpm
+from core.camera_control import snapshot
+from logging_setup.utilities import to_namespace
 
 import robot_control
 import mudi  # Only if including dispense_epoxy
@@ -217,6 +219,11 @@ def dispense_epoxy(rtde_control,
     **Outputs:**
     - probed_poses: List of poses where force contact was detected during dispensing.
     """
+    
+    process_config_json_path = "configs/process-config.json"
+    process_config = to_namespace(
+        json.load(open(process_config_json_path))
+    )
 
     needle_collision = False
     
@@ -238,9 +245,9 @@ def dispense_epoxy(rtde_control,
         dispenser.set_parameters(epoxy_dispense_pressure_kpa, epoxy_vacuum_pressure_kpa, epoxy_dispense_time_ms)
 
         # Create safe pose above the dispense point
-        probe_plane = coordinate_system_to_plane_parameters(dispense_jig_coordinate_system, logger)
-        safe_plane = offset_plane(probe_plane, safe_height_above_dispense_m)
-        dispense_safe_above_pose = project_point_onto_plane(safe_plane, dispense_point, logger)
+        probe_plane = cpm.coordinate_system_to_plane_parameters(dispense_jig_coordinate_system, logger)
+        safe_plane = pm.offset_plane(probe_plane, safe_height_above_dispense_m)
+        dispense_safe_above_pose = pm.project_point_onto_plane(safe_plane, dispense_point, logger)
 
         safe_joint_near_clean = process_config.jigs.needle_cleaner.safe_joint_above
         clean_safe_above_pose = process_config.jigs.needle_cleaner.local_clean_position
@@ -311,8 +318,8 @@ def dispense_epoxy(rtde_control,
         total_offset = distance_to_probe_plane + epoxy_retract_for_dispense_m
         
         # Create dispense plane offset by total amount from probe plane
-        dispense_plane = offset_plane(probe_plane, total_offset)
-        dispense_pose = project_point_onto_plane(dispense_plane, probed_pose, logger)
+        dispense_plane = pm.offset_plane(probe_plane, total_offset)
+        dispense_pose = pm.project_point_onto_plane(dispense_plane, probed_pose, logger)
         
         logger.info(f"Total dispense offset: {total_offset*1000:.3f} mm ({distance_to_probe_plane*1000:.3f} mm to plane + {epoxy_retract_for_dispense_m*1000:.3f} mm retract)")
         
@@ -502,22 +509,6 @@ def take_pictures(rtde_control,
     - timestamp: The timestamp used in filenames.
     """
     
-    # Find the next available ID number
-    existing_files = glob.glob(os.path.join(picture_save_folder, "dispense_point_*_*-*.png"))
-    existing_ids = []
-    for f in existing_files:
-        try:
-            base = os.path.basename(f)
-            # Extract the ID between the second underscore and the dash
-            # Example: dispense_point_2_5-20241112_150701.png -> Y=5
-            id_part = base.split("_")[3].split("-")[0]
-            existing_ids.append(int(id_part))
-        except Exception:
-            continue
-    next_id = max(existing_ids) + 1 if existing_ids else 1
-
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-
     rtde_control.moveJ(safe_joint_near_picture, joint_speed_rad_per_s, joint_accel_rad_per_s2)
     logger.info(f"Robot moved to safe joint near picture position:\n\t{safe_joint_near_picture}")
 
@@ -525,17 +516,14 @@ def take_pictures(rtde_control,
         rtde_control.moveL(dispense_point, rapid_speed_m_per_s, rapid_accel_m_per_s2)
         logger.info(f"Robot moved to picture position {i+1}:\n\t{dispense_point}")
 
-        if i == 0:
-            time.sleep(2)  # Extra delay for first position to allow camera to adjust
-            # Set camera settings for first picture
-            camera.ExposureAuto.SetValue('Once')
-            camera.GainAuto.SetValue('Once')
+        time.sleep(2)  # Extra delay for first position to allow camera to adjust
+        snapshot(camera, picture_save_folder)
         time.sleep(1) # Small delay to allow for any vibrations to settle
        
    
     rtde_control.moveJ(safe_joint_near_picture, joint_speed_rad_per_s, joint_accel_rad_per_s2)
     
-    return next_id, timestamp
+    pass
 
 def find_dispense_points(rtde_control,
                          slide_length_m:float,

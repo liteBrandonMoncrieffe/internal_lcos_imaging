@@ -6,10 +6,12 @@ from logging_setup.log_config import setup_logging
 from logging_setup.utilities import to_namespace, wait_for_user_action
 
 import mudi.dispensers
+from mudi_http import CM4
 import robot_control
 from core.robot_control import pickup_slide, place_slide, find_dispense_points, dispense_epoxy, take_pictures
-from core.camera_control import x
+from core.camera_control import initialize_camera, snapshot
 from core.vision_control import detect_drop_areas
+from core.dispenser_control import connect
 from pypylon import pylon
 
 
@@ -45,12 +47,10 @@ if __name__ == "__main__":
     rtde_read, rtde_dashboard, rtde_io, rtde_control = robot_control.initialize_robot_interfaces(rtde_frequency_Hz, robot_ip, logger)
     rtde_io.setSpeedSlider(speed_slider_percentage_decimal)
 
-    dispenser = mudi.dispensers.SuperSigmaCM3()
-    dispenser.connect(dispenser_com_port, dispenser_baud_rate)
+    dispenser = connect("100.100.100.16", 1026)
 
     picture_save_folder = 'src\\logging_setup\\dispense_pictures'
-    camera = pylon.InstantCamera(pylon.TlFactory.GetInstance().CreateFirstDevice())
-    print("Using device:", camera.GetDeviceInfo().GetModelName())
+    camera = initialize_camera()
 
     # get connection info and speeds
     robot_location = connection_and_speeds.RobotStation.RobotConfig.Location
